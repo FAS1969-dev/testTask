@@ -1,0 +1,57 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach to Chrome (не работает)",
+      "url": "http://localhost:8080/",
+      "port": 9222,
+      "webRoot": "${workspaceRoot}/src",
+      "sourceMaps": true,
+      "timeout": 15000,
+      "trace": "verbose"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome Debugger",
+      "port": 9222,
+      "url": "http://localhost:8080/",
+      "webRoot": "${workspaceRoot}/src",
+      "sourceMaps": true,
+      "timeout": 15000,
+      "trace": "verbose"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "launch webpack-dev-server",
+      "program": "${workspaceFolder}/node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+      "args": [
+        "--progress",
+        "--inline",
+        "--config",
+        "settings/webpack.dev.conf.js"
+      ],
+      "autoAttachChildProcesses": true,
+      "stopOnEntry": true,
+      "outFiles": []
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "launch webpack",
+      "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",
+      "args": [
+        "--progress",
+        "--config",
+        "settings/webpack.prod.conf.js"
+      ]
+    },
+  }
+]
+}
