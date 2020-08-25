@@ -1,0 +1,98 @@
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  min-width: 800px;
+  margin-top: 80px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 20px;
+  background-color: #d7fed9;
+  text-align: right;
+}
+
+footer>span {
+  font-family: Calibri;
+  font-size: 16px;
+  color: #333333;
+  padding-right: 100px;
+}
+
+.logo {
+  background: url(../public/fas-logo.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 150px 50px;
+}
+
+.notFound {
+  background: url(../public/not-found.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px #e6e6e6;
+  background-color: #ffffff;
+}
+
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 49px;
+  background-color: #4aa34e;
+}
+
+.references {
+  width: 338px;
+  height: 30px;
+  font-family: Calibri;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 45px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #b7d9b8;
+  margin-left: 50px;
+}
+
+.references:first-child {
+  margin-left: 250px;
+}
+
+.news-list {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 1px #e6e6e6;
+  background-color: #ffffff;
+}
+
+.news {
+  margin-bottom: 30px;
+  margin-right: 30px;  
+  border: solid 1px #e6e6e6;
+}
+
+.news-img {
+  min-width: 300px;
+  min-height: 200px;
+  max-width: 600px;
+  max-height: 400px;
+}
