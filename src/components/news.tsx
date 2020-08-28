@@ -1,6 +1,5 @@
 // comment
-import React, { useState, useEffect, Fragment } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 interface NewsProps {

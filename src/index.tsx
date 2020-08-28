@@ -4,10 +4,26 @@ import {
   Router, Route, Switch, Redirect, Link, RouteComponentProps,
 } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import * as firebase from 'firebase';
+import 'firebase/auth';
 
 import { IndexRoutes } from './routers';
 import NotFound from './views/NotFound/NotFound';
 import './styles/style.scss';
+
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: 'AIzaSyBrcp1E1-CAsXa1fdBkLmi9CgVNZuro3W4',
+  authDomain: 'tough-variety-286312.firebaseapp.com',
+  databaseURL: 'https://tough-variety-286312.firebaseio.com',
+  projectId: 'tough-variety-286312',
+  storageBucket: 'tough-variety-286312.appspot.com',
+  messagingSenderId: '94404888494',
+  appId: '1:94404888494:web:39d7f014eb0ab6c99d6a3f',
+};
+// Initialize Firebase
+if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
 
 const hist = createBrowserHistory();
 ReactDOM.render(
@@ -22,7 +38,6 @@ ReactDOM.render(
         <Switch>
           {IndexRoutes.map((route) => {
             if (route.params === undefined) {
-              //              console.log('undefined = ', route.path);
               return (
                 <Route exact path={route.path} component={route.component} key={route.id} />
               );
